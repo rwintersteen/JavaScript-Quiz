@@ -5,12 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poiret+One&display=swap" rel="stylesheet">
+<!--Linking Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Special+Elite&display=swap" rel="stylesheet">    
+<!--Linking CSS stylesheet-->
     <link rel='stylesheet' href='./style.css'>
 </head>
+
 <body>
-
-
-    <script src='./script.js'></script>
+<!--High Score Nav and Timer-->
+    <nav class="navbar navbar-light" style="background-color: #ec9f10;">
+        <a class="align-left ml-3" id="navbar-score" href="./scores.html" style="text-decoration:none">View Highscores</a>
+        <h4 style="font-family: 'Special Elite', cursive;">  Time remaining: <span id="timeLeft"> 120 </span></h4>
+    </nav>
+<!--Main Page-->
+    <div class="row justify-content-center mt-5 pt-3 pb-3" id="welcome-page">
+        <div class="col-10 col-lg-8 text-center">
+            <h1 style="font-family: 'Special Elite', cursive;">A Fun Way to Test Your JavaScript Knowledge!</h1>
+            <p style="font-family: 'Oswald', sans-serif;">
+                Ready to test your JavaScript chops? When you're ready, click 'Start Quiz' and read through the questions. You have 120 seconds to answer correctly with each correct answer adding over towards your high score. Be careful, answer incorrectly and lose 15 seconds from the timer!
+            </p>
+            <button onclick="startQuiz()" type="button" class="btn btn-danger btn-lg" id="quizStart">Start Quiz!</button>
+        </div>
+    </div>
+<!--Question Page-->
+<div class="row justify-content-center mt-5 pt-3 pb-3" id="quiz">
+    <div class="col-10 col-lg-8 text-center">
+        <h2 id="question" style="font-family: 'Special Elite', cursive;">Questions</h2>
+        <ul id="answers" class="list-unstyled">
+        </ul>
+    </div>
 </body>
-</html>
+
+<!--End Game Page-->
+<div class="row justify-content-center mt-5 pt-3 pb-3" id="end-page">
+    <div class="col-10 col-lg-8 text-center">
+        <h1 style="font-family: 'Special Elite', cursive;">STOP!</h1>
+        <p style="font-family: 'Oswald', sans-serif;">Your final score is:</p>
+        <h3 id="score"></h3>
+            <form id="submitInitials">
+                <div class="form-group">
+                    <div class="col-10 col-lg-8 text-center" id="title">
+                        <label for="inputInitials">Please enter Your Initials</label>
+                        <input type="text" class="form-control" id="playerInitials" value="">
+                    </div>
+                </div>
+                    <button type="submit" class="btn btn-danger btn-lg" id="submitButton">Submit</button>
+            </form>
+    </div>
+</div>
+    
+<!--Bootstrap and JavaScript Link-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="script.js"></script>
+    </body>
+    
+    </html>

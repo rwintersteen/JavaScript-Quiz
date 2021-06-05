@@ -1,7 +1,26 @@
-h1 {
-    font-family: 'Lobster', cursive;
+.beginning-content {
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-p {
-    font-family: 'Poiret One', cursive;
+#navbar-score {
+    font-family: 'Special Elite', cursive;
+    color: white;
+    margin-left: 20px;
+}
+
+.container {
+    margin-top: 250px;
+}
+
+#quiz-start {
+    font-family: 'Oswald', sans-serif;
+}
+
+#quizOption{
+    font-family: 'Oswald', sans-serif;
+}
+
+h4 {
+    color: white;
 }
